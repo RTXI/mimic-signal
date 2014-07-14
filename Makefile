@@ -1,9 +1,9 @@
-PLUGIN_NAME = mimic_signal
+PLUGIN_NAME = mimic-signal
 
-HEADERS = mimic.h
+HEADERS = mimic-signal.h
 
-SOURCES = mimic.cpp\
-	moc_mimic.cpp
+SOURCES = mimic-signal.cpp\
+	moc_mimic-signal.cpp
 
 LIBS = 
 
