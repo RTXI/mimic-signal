@@ -5,7 +5,9 @@
 
 ![Mimic Signal GUI](mimic-signal.png)
 
+<!--start-->
 Copies an input signal and outputs another with optional user-specified scaled gain or offset. 
+<!--end-->
 
 ####Input Channels:
 1. input(0) - Vin : the signal to be mimicked
