@@ -17,7 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <mimic-signal.h>
-#include <QtGui>
 
 extern "C" Plugin::Object *createRTXIPlugin(void) {
 	return new Mimic();
@@ -65,7 +64,7 @@ Mimic::Mimic(void) : DefaultGUIModel("Mimic",::vars,::num_vars) {
 	setParameter("Offset",offset);
 	refresh();
 
-	QTimer::singleShot(0, this, SLOT(resizeMe()));
+	resizeMe();
 }
 
 Mimic::~Mimic(void) {}
