@@ -64,7 +64,7 @@ Mimic::Mimic(void) : DefaultGUIModel("Mimic",::vars,::num_vars) {
 	setParameter("Offset",offset);
 	refresh();
 
-	resizeMe();
+	QTimer::singleShot(0, this, SLOT(resizeMe()));
 }
 
 Mimic::~Mimic(void) {}
