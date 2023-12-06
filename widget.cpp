@@ -56,12 +56,18 @@ void mimic_signal::Component::execute()
       writeoutput(0, readinput(0) * gain + offset);
       break;
     case RT::State::INIT:
+      gain = getValue<double>(PARAMETER::GAIN);
+      offset = getValue<double>(PARAMETER::OFFSET);
+      setState(RT::State::PAUSE);
+      break;
     case RT::State::MODIFY:
       gain = getValue<double>(PARAMETER::GAIN);
       offset = getValue<double>(PARAMETER::OFFSET);
       setState(RT::State::EXEC);
       break;
     case RT::State::PERIOD:
+      setState(RT::State::EXEC);
+      break;
     case RT::State::PAUSE:
       break;
     case RT::State::UNPAUSE:
