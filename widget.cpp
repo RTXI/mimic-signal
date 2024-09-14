@@ -21,6 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "widget.hpp"
 
+#include <rtxi/event.hpp>
+
 mimic_signal::Plugin::Plugin(Event::Manager* ev_manager)
     : Widgets::Plugin(ev_manager, std::string(mimic_signal::MODULE_NAME))
 {
@@ -28,7 +30,7 @@ mimic_signal::Plugin::Plugin(Event::Manager* ev_manager)
 
 mimic_signal::Panel::Panel(QMainWindow* main_window, Event::Manager* ev_manager)
     : Widgets::Panel(
-        std::string(mimic_signal::MODULE_NAME), main_window, ev_manager)
+          std::string(mimic_signal::MODULE_NAME), main_window, ev_manager)
 {
   setWhatsThis(
       "<p><b>Mimic:</b><br>This module outputs the signal that is used as "
